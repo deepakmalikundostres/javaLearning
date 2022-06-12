@@ -1,0 +1,356 @@
+//import java.util.ArrayList;
+//import java.util.Scanner;
+//import java.io.*;
+//import java.util.*;
+//
+//public class Main {
+//    public static void main(String[] args) {
+//
+////        char  p ='a' -32;
+////        System.out.println(p);
+////
+////
+////        String name = "abc";
+////
+////
+////        // taking input string in java
+////
+//        Scanner sc = new Scanner(System.in);
+////
+////        String str = sc.nextLine();
+////
+////        String  greeting = "hello" + str;
+////
+////        System.out.println(greeting);
+//
+//        /**
+//         *
+//         *      string is basically an array of character
+//         *      for ex
+//         *               h e l l o
+//         *               0 1 2 3 4
+//         *               so str.charAt(0) = 9;
+//         *
+//         *
+//         */
+//
+//
+//        /**
+//         *         string main function substring
+//         *
+//         *        str  = h e l l o
+//         *               0 1 2 3 4
+//         *
+//         *          str.substring(starting starting_index,last_index)
+//         *          remember last_index should be range bound;
+//         *          str.substring(3,4)  l
+//         *          str.substring(3,3) empty
+//         *          str.substring(4,2) return false;
+//         *
+//         */
+//
+//
+////          String p = "12345";
+////          System.out.println(p.substring(0,21));
+//
+//
+//        /**
+//         *
+//         *     concatenation of two substring
+//         *     s1.concat(s2)
+//         *
+//         */
+//
+//
+//        /**
+//         *  index of
+//         *  str = "hello"
+//         *   str.indexOf("el") = 1;
+//         *   str.indexOf("eL") = -1;
+//         *
+//         *
+//         */
+//
+////        String m = "my name is deepak";
+////        String k = "my name is deepak";
+////
+////        System.out.println(m.indexOf(" is deepak"));
+////
+////       if(m.equals(k)) System.out.println("they are equal");
+//
+//        /**
+//         *       String m = "my name is deeiak";
+//         *         String k = "my name is deepak";
+//         *
+//         *         m = m.replace("name","naam");
+//         *         m = m.replace("i","naam");
+//         *         System.out.println(m); // my naam naams deenaamak
+//         *
+//         *
+//         */
+//
+//
+//      // print all character and of a string and check if it palindrome or not
+//
+////        String str = sc.nextLine();
+////        final int len = str.length();
+////        for(int i=0;i<len;i++){
+////            System.out.println(str.charAt(i));
+////        }
+////
+////        int left =0;
+////        int right = len-1;
+////        boolean isPalindrome = true;
+////        while(left<right){
+////            if(str.charAt(left) != str.charAt(right)){
+////                isPalindrome = false;
+////                break;
+////            }
+////            left++;right--;
+////
+////        }
+////        if (isPalindrome) {
+////            System.out.println("Yes it is a Palindrome string");
+////        } else {
+////            System.out.println("No it is not a Palindrome string");
+////        }
+//
+//
+//
+//     // ArrayList and stringBuilders
+//
+//        /**
+//         *
+//         *
+//         *         ArrayLists
+//         *
+//         *         using array  is one biggest disadvantage i.e. they have fixed size.
+//         *         I think ArrayLists is similar to vector in c++ and also same type of data
+//         *
+//         *         ArrayList<String>cars = new Arraylist<>();
+//         *
+//         *
+//         */
+//
+////
+////        ArrayList<Integer> list = new ArrayList<>();
+////
+////        // print
+////        System.out.println(list);
+////
+////        // adding
+////        list.add(323);
+////        list.add(434);
+////        list.add(32);
+////
+////        // print
+////        System.out.println(list);
+////
+////        // add at index at particular value;
+////
+////        list.add(1,32);
+////        System.out.println(list);
+////
+////        // get value at ith index;
+////        list.get(1);
+////        System.out.println(list.get(1));
+////
+////        // replace
+////
+////        list.set(1,100);
+////        System.out.println(list);
+////
+////
+////        // remove
+////        list.remove(2);
+////        System.out.println(list);
+//
+//
+//
+//        // question find the intersection of two array ASSUME TO BE SORTED:
+//        // one [1 1 2 3 4 7 8]
+//        // two [ 0 1 3 3 4 5]
+////
+////        ArrayList<Integer> array1 = new ArrayList<>();
+////        ArrayList<Integer> array2 = new ArrayList<>();
+//////        ArrayList<Integer> intersection = new ArrayList<Integer>();
+////        int size1,size2;
+////        size1 = sc.nextInt();
+////        for(int i=0;i<size1;i++){
+////            int n = sc.nextInt();
+////            array1.add(n);
+////        }
+////        size2 = sc.nextInt();
+////        for(int j=0;j<size2;j++){
+////            int k = sc.nextInt();
+////            array2.add(k);
+////        }
+//
+////        System.out.println(array1);
+////        System.out.println(array2);
+////
+////        int i =0;
+////        int j= 0;
+////
+////        while(i<size1 && j<size2){
+////            System.out.println(i + " " + j);
+////
+////            if(array1.get(i)==array2.get(j)){
+////                intersection.add(array1.get(i));
+////                i++;
+////                j++;
+////            }else if(array1.get(i)< array2.get(j)){
+////                i++;
+////            }else j++;
+////        }
+////        System.out.println(intersection);
+//
+//
+////
+////        ArrayList<Integer> sumOfTwoArray = new ArrayList<Integer>();
+////
+////
+////        /**
+////         *     9 9 9
+////         *   9 9 9 9
+////         *
+////         *
+////         */
+////        int i=  size1-1;
+////        int j = size2-1;
+////        int carry =0;
+////        while(i>=0 && j>=0){
+////
+////            int last_digit = (array1.get(i) + array2.get(j) +carry)%10;
+////            carry = (array1.get(i) + array2.get(j) + carry)/10;
+////            sumOfTwoArray.add(last_digit);
+////            i--;
+////            j--;
+////
+////        }
+////
+////        while(i>=0){
+////            int last_digit = (array1.get(i) +carry)%10;
+////            carry = (array1.get(i) + carry)/10;
+////            sumOfTwoArray.add(last_digit);
+////            i--;
+////
+////        }
+////        while(j>=0){
+////            int last_digit = (array2.get(j) +carry)%10;
+////            carry = (array2.get(j) + carry)/10;
+////            sumOfTwoArray.add(last_digit);
+////            j--;
+////
+////        }
+////        if(carry>0) sumOfTwoArray.add(carry);
+////
+////        Collections.reverse(sumOfTwoArray);
+////        System.out.println(sumOfTwoArray);
+//
+//
+//        // string builders
+//
+//        /**
+//         *
+//         *           Immutability of string in java
+//         *           string in java stored in a special memory area known as string constant pool
+//         *
+//         *
+//         *
+//         */
+//
+////
+////          String firstName = "Deepak";
+////          String lastName = "malik";
+////          String fullName = firstName + " " + lastName + "l";
+////          System.out.println(fullName);
+////
+////                                             // optional
+////         StringBuilder  sb = new StringBuilder(firstName);  /// string to stringBuilder
+////
+////          // string-builder vs string in java
+////
+////         String myName = "deepakMalik";
+////         StringBuilder myNameBuilder = new StringBuilder("deepakMalik");
+////
+////         // length
+////
+////          System.out.println(myName.length());
+////          System.out.println(myNameBuilder.length());
+////
+////          // charAt
+////
+////          System.out.println(myName.charAt(0));
+////          System.out.println(myNameBuilder.charAt(0));
+////
+////          // insert
+////
+////          myName+='a';
+////          myName+="d";
+////          System.out.println(myName);
+////          // myNameBuilder+='a'; wrong
+////          myNameBuilder.append('a');  // myNameBuilder.append('defe');
+////          myNameBuilder.insert(0,"mynameis"); // index and it shift also
+////          System.out.println(myNameBuilder);
+////
+////
+////
+////          // update
+////          myNameBuilder.setCharAt(myNameBuilder.length()-1,'A');
+////        System.out.println(myNameBuilder);
+//
+//
+//
+//        // TOGGLE THE INPUT
+//        /**
+//         *  abcGeA
+//         *  ABCgEa
+//         *
+//         */
+//
+//        // can't update
+////        String toggleStr  = sc.nextLine();
+////
+////        for(int i=0;i<toggleStr.length();i++){
+////            // UPPER CASE
+////            if(toggleStr.charAt(i)>='A' && toggleStr.charAt(i)<='Z'){
+////            }
+////        }
+////
+////        StringBuffer toogleStr = new StringBuffer(sc.nextLine());
+////        for(int i=0;i<toogleStr.length();i++){
+////            if(toogleStr.charAt(i)>='A' && toogleStr.charAt(i)<='Z'){
+////
+////                char ch = (char)(toogleStr.charAt(i) + 32);
+////                toogleStr.setCharAt(i, ch);
+////            }else{
+////                char ch = (char)(toogleStr.charAt(i) - 32);
+////                toogleStr.setCharAt(i, ch);
+////            }
+////        }
+////        System.out.println(toogleStr);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//    }
+//}
